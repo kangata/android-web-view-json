@@ -18,6 +18,8 @@ import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
 
+    String webURL = "http://192.168.200.26:8800";
+
     @SuppressLint("SetJavaScriptEnabled")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         webView.setWebViewClient(new MyWebViewClient());
         webView.setWebChromeClient(new MyChromeWebClient(this));
 
-        webView.loadUrl("http://192.168.200.26:8800");
+        webView.loadUrl(webURL);
     }
 
     private static class MyWebViewClient extends WebViewClient {
